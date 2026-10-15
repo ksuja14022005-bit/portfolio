@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Suja K | Commerce Graduate Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EEF2EC; --surface:#F9FBF7; --ink:#1D2B22; --muted:#55645A; --sage:#5B7060; --line:#CBD6C8;
+  --c1:#5B7060; --c2:#E7B84B; --c3:#D9826B; --c4:#8FB5B0;
+  --display:'Bricolage Grotesque','Trebuchet MS',sans-serif; --body:'DM Sans',system-ui,sans-serif;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#121A15;--surface:#1A251E;--ink:#E8EFE6;--muted:#9FB0A4;--sage:#9DB8A2;--line:#2F4036;--c1:#7E9A83;}
+}
+:root[data-theme="dark"]{--bg:#121A15;--surface:#1A251E;--ink:#E8EFE6;--muted:#9FB0A4;--sage:#9DB8A2;--line:#2F4036;--c1:#7E9A83;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.65 var(--body)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--c2);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 clamp(1.25rem,5vw,3rem)}
+nav{display:flex;flex-wrap:wrap;gap:.25rem 1.5rem;padding:1.5rem 0;font-weight:500;font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted);padding:.25rem 0;border-bottom:2px solid transparent}
+nav a:hover{color:var(--ink);border-color:var(--c2)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:2rem;align-items:center;padding:3rem 0 4.5rem}
+.hero p.hi{margin:0 0 .5rem;color:var(--sage);font-weight:600}
+h1{font:800 clamp(4.5rem,15vw,9.5rem)/.9 var(--display);margin:0;letter-spacing:-.04em}
+.role{font:500 clamp(1.2rem,2.6vw,1.6rem)/1.3 var(--display);margin:1.5rem 0 0;max-width:24ch}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.btn{display:inline-block;padding:.8rem 1.4rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:background .2s,color .2s}
+.btn.main{background:var(--ink);color:var(--bg)}
+.btn:hover{background:var(--c2);color:#1D2B22;border-color:var(--c2)}
+
+/* paint palette */
+.palette{position:relative;aspect-ratio:1;max-width:340px;width:100%;justify-self:center}
+.palette i{position:absolute;border-radius:50%;mix-blend-mode:multiply;animation:drop .9s cubic-bezier(.2,.9,.3,1.2) both}
+:root[data-theme="dark"] .palette i,
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .palette i{mix-blend-mode:screen;opacity:.85}}
+.palette i:nth-child(1){width:62%;height:62%;left:0;top:6%;background:var(--c1)}
+.palette i:nth-child(2){width:52%;height:52%;right:0;top:0;background:var(--c2);animation-delay:.12s}
+.palette i:nth-child(3){width:56%;height:56%;left:22%;bottom:0;background:var(--c3);animation-delay:.24s}
+.palette i:nth-child(4){width:30%;height:30%;right:4%;bottom:12%;background:var(--c4);animation-delay:.36s}
+@keyframes drop{from{transform:scale(0);opacity:0}to{transform:scale(1)}}
+@media (prefers-reduced-motion:reduce){.palette i{animation:none}html{scroll-behavior:auto}}
+
+/* sections */
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(1.8rem,4vw,2.5rem)/1.1 var(--display);margin:0 0 2rem;letter-spacing:-.02em}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:1rem 3rem}
+.split h2{margin-bottom:0}
+.lead{font-size:1.2rem;max-width:62ch;margin:0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin-top:2rem}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:1rem 1.1rem}
+.fact b{display:block;font:700 1.35rem/1.2 var(--display)}
+.fact span{color:var(--muted);font-size:.92rem}
+
+/* timeline */
+.tl{list-style:none;margin:0;padding:0 0 0 1.75rem;border-left:3px solid var(--line)}
+.tl li{position:relative;padding-bottom:2rem}
+.tl li:last-child{padding-bottom:0}
+.tl li::before{content:"";position:absolute;left:calc(-1.75rem - 9px);top:.45rem;width:15px;height:15px;border-radius:50%;background:var(--c2);border:3px solid var(--bg)}
+.tl h3{font:700 1.25rem/1.3 var(--display);margin:0}
+.tl .when{color:var(--sage);font-weight:600;font-size:.95rem}
+.tl p{margin:.25rem 0 0;color:var(--muted)}
+.mark{display:inline-block;margin-top:.5rem;padding:.15rem .7rem;border-radius:999px;background:var(--c2);color:#1D2B22;font-weight:600;font-size:.9rem}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:1.5rem 1.75rem}
+.card h3{font:700 1.3rem/1.3 var(--display);margin:0}
+.card .when{color:var(--sage);font-weight:600}
+
+/* skills */
+.groups{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.25rem}
+.groups h3{font:700 1.1rem var(--display);margin:0 0 .85rem}
+.chips{display:flex;flex-wrap:wrap;gap:.5rem;margin:0;padding:0;list-style:none}
+.chips li{padding:.35rem .85rem;border-radius:999px;border:1.5px solid var(--sage);font-size:.95rem;font-weight:500}
+.g2 .chips li{border-color:var(--c3)} .g3 .chips li{border-color:var(--c2)} .g4 .chips li{border-color:var(--c4)}
+
+/* contact */
+.contact{display:grid;gap:.75rem;font:600 clamp(1.1rem,3.2vw,1.6rem)/1.3 var(--display)}
+.contact a{text-decoration:none;border-bottom:3px solid var(--c2);width:fit-content;overflow-wrap:anywhere}
+.contact a:hover{background:var(--c2);color:#1D2B22}
+.contact small{display:block;font:400 1rem var(--body);color:var(--muted);margin-top:.15rem}
+footer{padding:2rem 0 3rem;color:var(--muted);font-size:.92rem;border-top:1px solid var(--line)}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;padding-top:1.5rem}
+  .palette{max-width:240px;justify-self:start;order:-1}
+  .split{grid-template-columns:1fr}
+  .split h2{margin-bottom:1.25rem}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav aria-label="Sections">
+    <a href="#about">About</a><a href="#education">Education</a><a href="#experience">Experience</a>
+    <a href="#skills">Skills</a><a href="#contact">Contact</a>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <p class="hi">Hello, I am</p>
+      <h1>Suja K</h1>
+      <p class="role">Commerce graduate who likes keeping things organised, on time and on budget.</p>
+      <div class="cta">
+        <a class="btn main" href="#contact">Get in touch</a>
+        <a class="btn" href="#skills">See my skills</a>
+      </div>
+    </div>
+    <div class="palette" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+  </header>
+
+  <section id="about" class="split">
+    <h2>About me</h2>
+    <div>
+      <p class="lead">I have just completed my B.Com and I am known for strong organisational skills, problem solving and a proactive mindset. I can handle several tasks and tough situations calmly, and I stay motivated to reach my goals.</p>
+      <p class="lead" style="margin-top:1rem">I enjoy learning new knowledge and skills, I adapt quickly to new places and people, and I keep growing through online courses.</p>
+      <div class="facts">
+        <div class="fact"><b>B.Com</b><span>University of Madras</span></div>
+        <div class="fact"><b>2025</b><span>Graduation year</span></div>
+        <div class="fact"><b>Tally + Excel</b><span>Core software skills</span></div>
+        <div class="fact"><b>Tamil, English</b><span>Languages</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="split">
+    <h2>Education</h2>
+    <ol class="tl">
+      <li>
+        <span class="when">2022 to 2025</span>
+        <h3>Bachelor of Commerce (General)</h3>
+        <p>University of Madras</p>
+      </li>
+      <li>
+        <span class="when">2022</span>
+        <h3>Higher Secondary Education</h3>
+        <p>Commerce with Computer Applications</p>
+        <span class="mark">411 / 600</span>
+      </li>
+      <li>
+        <span class="when">2020</span>
+        <h3>Secondary Education</h3>
+      </li>
+    </ol>
+  </section>
+
+  <section id="experience" class="split">
+    <h2>Experience</h2>
+    <div class="card">
+      <span class="when">2022</span>
+      <h3>Member, Swachh Bharat</h3>
+      <p style="margin:.5rem 0 0;color:var(--muted)">As a college member of Swachh Bharat, I took part in camps held at orphanages and contributed wherever I was needed. It taught me teamwork, empathy and initiative.</p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="groups">
+      <div class="g1"><h3>Technical</h3>
+        <ul class="chips"><li>Tally</li><li>Excel</li><li>Computer skills</li><li>Internet browsing</li><li>Full stack basics (online classes)</li></ul></div>
+      <div class="g2"><h3>Professional</h3>
+        <ul class="chips"><li>Administrative efficiency</li><li>Office organisation</li><li>Budget management</li><li>Schedule planning</li><li>Time management</li><li>Teamwork and coordination</li></ul></div>
+      <div class="g3"><h3>Personal</h3>
+        <ul class="chips"><li>Communication</li><li>Positive attitude</li><li>Dependability</li><li>Problem solving</li><li>Initiative</li><li>Adaptability</li><li>Teamwork</li></ul></div>
+      <div class="g4"><h3>Outside work</h3>
+        <ul class="chips"><li>Painting</li><li>Drawing</li><li>Cooking</li><li>Anime</li><li>Music</li></ul></div>
+    </div>
+  </section>
+
+  <section id="contact" class="split">
+    <h2>Contact</h2>
+    <div>
+      <div class="contact">
+        <a href="mailto:k.suja14022005@gmail.com">k.suja14022005@gmail.com</a>
+        <a href="tel:+917200444126">+91 72004 44126</a>
+        <span>153, MR Nagar, Kodungaiyur<small>Chennai, Tamil Nadu</small></span>
+      </div>
+      <div class="card" style="margin-top:2rem">
+        <span class="when">Reference</span>
+        <h3>CTTE College for Women</h3>
+        <p style="margin:.25rem 0 .5rem;color:var(--muted)">University of Madras</p>
+        <a href="tel:+914425375753">044 2537 5753</a><br>
+        <a href="https://www.cttewc.edu.in" rel="noopener">www.cttewc.edu.in</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>Suja K, Commerce graduate and fresher</footer>
+</div>
+</body>
+</html>
